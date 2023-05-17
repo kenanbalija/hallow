@@ -1,9 +1,5 @@
 name: Auto Commit
 
-on:
-  schedule:
-    # Run every 30 minutes
-    - cron:  '* 2 * * * *'
 
 jobs:
   build:
