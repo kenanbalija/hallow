@@ -11,6 +11,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.MY_PAT }}
 
     - name: Create or update file
       run: echo "Last auto commit was at $(date)" > timestamp
@@ -25,5 +27,5 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.MY_PAT }}
         branch: ${{ github.ref }}
