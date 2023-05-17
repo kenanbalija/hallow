@@ -17,8 +17,8 @@ jobs:
 
     - name: Commit and push if it changed
       run: |
-        git config user.name "kenanbalija "
+        git config user.name "kenanbalija"
         git config user.email "kenanbalija.dev@gmail.com"
         git add -A
         git diff --quiet && git diff --staged --quiet || git commit -m "Auto update"
-        git push https://${{secrets.MY_PAT}}@github.com/kenanbalija/hallow.git main
+        git push
